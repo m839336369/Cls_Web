@@ -5,7 +5,7 @@ FROM nginx
 RUN rm /etc/nginx/conf.d/default.conf
 
 # 将Vue项目的生产版本复制到Nginx的默认网页目录
-COPY ./app/spa /usr/share/nginx/html
+COPY ./app /usr/share/nginx/html
 
 # 复制自定义Nginx配置文件（如果有）
 COPY nginx.conf /etc/nginx/nginx.conf

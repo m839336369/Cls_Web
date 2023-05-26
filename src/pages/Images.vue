@@ -1,7 +1,7 @@
 <template>
   <q-expansion-item label="卡车" icon="img:/cls/卡车.svg">
     <q-infinite-scroll ref="truck_container" class="row q-gutter-sm">
-      <ImageCard v-for="item in trucks" :key="item" v-bind:image="item">
+      <ImageCard v-for="item in trucks" :key="item" v-bind:image="item" @deleteImage="deleteCard">
       </ImageCard>
     </q-infinite-scroll>
   </q-expansion-item>
